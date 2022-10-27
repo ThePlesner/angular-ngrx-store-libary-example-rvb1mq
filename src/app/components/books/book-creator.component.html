@@ -1,0 +1,18 @@
+<p>Title:</p>
+<input type="text" [(ngModel)]="bookTitle" />
+<p>Author:</p>
+<select [(ngModel)]="selectedAuthor">
+  <ng-container *ngFor="let author of authors$ | async">
+    <option [ngValue]="author">
+      {{ author.name }}
+    </option>
+  </ng-container>
+</select>
+<div>
+  <button
+    [disabled]="!bookTitle || !selectedAuthor"
+    (click)="createBook(bookTitle, selectedAuthor)"
+  >
+    Add Book
+  </button>
+</div>

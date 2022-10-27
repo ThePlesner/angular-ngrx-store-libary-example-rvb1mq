@@ -1,0 +1,7 @@
+<p>Name:</p>
+<input type="text" [(ngModel)]="authorName" />
+<div>
+  <button [disabled]="!authorName" (click)="createAuthor(authorName)">
+    Add Author
+  </button>
+</div>

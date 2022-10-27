@@ -1,0 +1,6 @@
+<ng-container *ngIf="authors$ | async as authors">
+  <h2>Available Authors</h2>
+  <div *ngFor="let author of authors">
+    Name: <strong>{{ author.name }}</strong>
+  </div>
+</ng-container>
